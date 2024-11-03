@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking Escape Room - Posten 5</title>
+    
+    <!-- Standard-Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
+
+    <style>
+        /* Grundstil */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000;
+            color: #0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            margin: 0;
+            color: #fff;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #555;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header .date {
+            font-size: 16px;
+        }
+
+        /* Hauptinhalt */
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .content img {
+            max-width: 100%;
+            border: 1px solid #444;
+            margin-bottom: 20px;
+        }
+        .content p {
+            text-align: justify;
+            font-size: 18px;
+            color: #0f0;
+        }
+
+        /* Button Design */
+        .submit-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        /* Code Beispiel */
+        .code-example {
+            background-color: #222;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+
+        /* Sponsoren */
+        .sponsors-section h2 {
+            color: #fff;
+        }
+        .sponsors-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .sponsors-container img {
+            width: 100px;
+            height: auto;
+        }
+
+        /* Mobilgeräte Optimierung */
+        @media (max-width: 600px) {
+            .sponsors-container {
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Hacking Escape Room</h1>
+        <div class="date">30. November 2024, Ab 14:00 Uhr</div>
+    </div>
+
+    <!-- Hauptinhalt -->
+    <div class="content">
+
+        <h2>Posten 5</h2>
+
+        <p>
+            „Fast geschafft! Ihr habt es bereits weit gebracht. Nun steht ihr vor dem letzten Schritt, um die Botschaft des Hackers zu knacken. 
+            Der Hash, den ihr habt, ist der Schlüssel, aber ohne das passende Passwort bleibt er verschlossen. 
+            Dank eurer Analyse in Posten 4 habt ihr den richtigen Hashcat-Wert ermittelt. Jetzt ist es an der Zeit, diesen anzuwenden, um das Passwort herauszufinden.
+        </p>
+
+        <p>
+            Um den Hash zu knacken, müsst ihr zunächst den Hashcat-Befehl im Terminal eingeben und den Hash aus Posten 3 einsetzen. 
+            Kopiert den Hash, den ihr dort gefunden habt und fügt ihn direkt in den Befehl ein. 
+            Hier ist die Anleitung:
+        </p>
+
+        <p>
+            1.Öffnet ein weiteres Terminalfenster und gebt folgenden Befehl ein:
+        </p>
+
+        <!-- Code Beispiel -->
+        <div class="code-example">
+            <code>
+                hashcat -m (Wert von Posten 4) -a 0 (Hash aus Posten 3) "/usr/share/wordlists/rockyou.txt"
+            </code>
+        </div>
+
+        <p>
+            Drückt Enter, um den Vorgang zu starten.
+        </p>
+
+        <p>
+            2.Nun müsst ihr denselben Befehl noch einmal eingeben, allerdings mit einem kleinen Zusatz, um das Ergebnis anzuzeigen. 
+            Gebt dazu diesen Befehl ein:
+        </p>
+
+        <!-- Code Beispiel -->
+        <div class="code-example">
+            <code>
+                hashcat -m (Wert aus Posten 4) -a 0 (Hash aus Posten 3) "/usr/share/wordlists/rockyou.txt" --show
+            </code>
+        </div>
+        
+        <p>
+            <b><em>Wenn alles geklappt hat, solltet ihr jetzt das Passwort entschlüsselt sehen!</em></b>  
+            Dies ist das letzte Puzzlestück, das wir brauchen, um die Pläne des Hackers zu durchschauen. 
+            Ein super Job! Mit diesem Passwort habt ihr den Hacker enttarnt!“
+        </p>
+
+        <!-- Button zum Weiterleiten -->
+        <button class="submit-btn" onclick="location.href='posten4.html';">Zurück</button>
+    </div>
+
+    <!-- Sponsorenbereich -->
+    <div class="sponsors-section content">
+        <h2>Sponsoren</h2>
+        <div class="sponsors-container">
+            <a href="https://m.youtube.com/c/aultrade">
+                <img src="A-Ultra_sponsor.jpeg" alt="Sponsor A-Ultra">
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

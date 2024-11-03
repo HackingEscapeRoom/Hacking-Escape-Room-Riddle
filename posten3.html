@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking Escape Room - Posten 3</title>
+    
+    <!-- Standard-Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png">
+
+    <style>
+        /* Grundstil */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000;
+            color: #0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            margin: 0;
+            color: #fff;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #555;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header .date {
+            font-size: 16px;
+        }
+
+        /* Hauptinhalt */
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .content img {
+            max-width: 100%;
+            border: 1px solid #444;
+            margin-bottom: 20px;
+        }
+        .content p {
+            text-align: justify;
+            font-size: 18px;
+            color: #0f0;
+        }
+
+        /* Button Design */
+        .submit-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        /* Code Beispiel */
+        .code-example {
+            background-color: #222;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+
+        /* Sponsoren */
+        .sponsors-section h2 {
+            color: #fff;
+        }
+        .sponsors-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .sponsors-container img {
+            width: 100px;
+            height: auto;
+        }
+
+        /* Mobilgeräte Optimierung */
+        @media (max-width: 600px) {
+            .sponsors-container {
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Hacking Escape Room</h1>
+        <div class="date">30. November 2024, Ab 14:00 Uhr</div>
+    </div>
+
+    <!-- Hauptinhalt -->
+    <div class="content">
+
+        <h2>Posten 3</h2>
+
+        <p>
+            „Merkt euch! Vertraut niemals einem fremden USB-Stick. 
+            Selbst harmlose Sticks können mit bösartigem Code infiziert sein. 
+            Hier ein Beispiel: Ein sogenannter ‚Rubber Ducky‘ kann sich als Tastatur ausgeben und selbstständig gefährliche Befehle ausführen. 
+            Unbedachte Nutzung könnte ein System gefährden oder sogar sensible Daten stehlen. 
+            So etwas dürfen wir dem Hacker natürlich nicht ermöglichen!
+        </p>
+
+        <p>
+            Ihr seid wirklich gut! 
+            Dank eurer bisherigen Arbeit haben wir jetzt die versteckte Datei und den Hinweis auf die Steganografie-Methode, die der Hacker benutzt hat. 
+            Die meisten Menschen denken bei einem Bild an nichts weiter als das, was sie sehen. 
+            Aber erfahrene Hacker wissen, dass man oft viel mehr darin verstecken kann, als auf den ersten Blick sichtbar ist. 
+            So eine versteckte Nachricht im Bild nennt man Steganografie.
+        </p>
+
+        <p>
+            Der Hacker hat uns offenbar eine Nachricht hinterlassen, die in einem Bild auf unserem System versteckt ist. 
+            Wenn wir diese Nachricht finden und entschlüsseln können, erfahren wir vielleicht mehr über den Angreifer. 
+            Öffnet Terminal, aber passt auf: der Steganografie-Befehl, den ihr im ersten Posten gefunden habt, muss erst noch richtig sortiert werden, um das versteckte Bild zu entschlüsseln. 
+            Zusätzlich dazu, müssen wir nach dem Befehl das Password eingeben.
+        </p>
+
+        <p>
+            Zum Glück konnte unser IT-Team bereits eine Liste mit möglichen Passwörtern des Hackers erstellen. 
+            Es gibt etwa 25 Kombinationen, die infrage kommen könnten. 
+            Ihr könnt euch die Passwortliste bei unserem IT-Team holen.
+        </p>
+
+        <p>
+            Ich habe unsem IT-Team darauf hingewiesen, dass man solche Passwörter in der Regel auch automatisiert knacken kann, aber hier brauchen wir eure Hilfe und Kreativität! 
+            Versucht, die Passwörter nacheinander durchzugehen, um die Nachricht im Bild zu entschlüsseln.“
+        </p>
+
+        <!-- Button zum Weiterleiten -->
+        <button class="submit-btn" onclick="location.href='posten4.html';">Weiter</button>
+        <button class="submit-btn" onclick="location.href='posten2.html';">Zurück</button>
+    </div>
+
+    <!-- Sponsorenbereich -->
+    <div class="sponsors-section content">
+        <h2>Sponsoren</h2>
+        <div class="sponsors-container">
+            <a href="https://m.youtube.com/c/aultrade">
+                <img src="A-Ultra_sponsor.jpeg" alt="Sponsor A-Ultra">
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
